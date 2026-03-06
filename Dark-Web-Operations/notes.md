@@ -208,36 +208,166 @@ This course provides a foundational understanding of the clear web, deep web, an
 
 ---
 
+---
+
 ## 💪 Hands-On Labs & Challenges
 
-- [x] Browsing Dark Web Sites Activity
-- [x] Dark Web Operations Challenge (Intelligence Collection)
-- [x] Final Exam
+### Course Capstone: Dark Web Intelligence Collection
+
+**Scenario:** Working as a Dark Web Intelligence Analyst (DWIA), tasked with 
+infiltrating a hidden dark web site to uncover malicious activity and record 
+intelligence findings.
+
+---
+
+#### Challenge 1: Generating Valid Credentials
+- **Task:** Find the command used in the browser console to generate valid login credentials
+- **Method:**
+  1. Loaded the dark web site using TOR browser (with VPN active)
+  2. Right-clicked on the page → clicked **Inspect**
+  3. Navigated to the **Console** tab
+  4. Ran the command: `generateUserCredentials()`
+  5. Retrieved a Base64 encoded credential string
+  6. Decoded the Base64 string using **CyberChef** (From Base64 recipe)
+- **Result:** Successfully obtained valid login credentials
+- **Key Skills:** Browser developer tools, Base64 decoding, CyberChef
+
+---
+
+#### Challenge 2: Decoding Pinned Post Titles
+- **Task:** Identify the titles of three pinned posts displayed in hexadecimal
+- **Method:**
+  1. Located the three pinned posts on the site
+  2. Identified their hexadecimal-based titles
+  3. Used **CyberChef** to decode hexadecimal to ASCII text
+- **Result:** Successfully decoded all three post titles
+- **Decoded Values:** Drugs, Pleasure, and Drops
+- **Key Skills:** Hexadecimal decoding, CyberChef, data analysis
+
+---
+
+#### Challenge 3: Identifying Another Illegal Site
+- **Task:** Find a reference to another illegal site in the Messages board
+- **Method:**
+  1. Navigated to the Messages board
+  2. Located a post from user **"Basilisk95"**
+  3. Clicked the hyperlink in the post
+  4. Discovered a second site belonging to hacking group **Midnite**
+- **Result:** Successfully identified and documented the linked illegal site
+- **Key Skills:** Open source intelligence (OSINT), dark web navigation, 
+  link analysis
+
+---
+
+#### Challenge 4: Extracting Transaction Intelligence
+- **Task:** Retrieve customer details from a visible transaction log
+- **Method:**
+  1. Located the **"Recent Transactions"** section on the site
+  2. Clicked the **$7,000** hyperlinked transaction
+  3. Retrieved an invoice containing customer details
+- **Result:** Successfully documented:
+  - Customer full name
+  - Customer email address
+  - Purpose of the transaction
+- **Key Skills:** Intelligence collection, documentation, financial 
+  transaction analysis
+
+---
+
+#### Challenge 5: Steganography — Finding a Hidden Location
+- **Task:** Determine the city and date of an illegal event hosted by user "PJ"
+- **Method:**
+  1. Downloaded the image from PJ's post
+  2. Used **steganography tool** 
+     (https://stylesuxx.github.io/steganography/) to decode hidden data
+  3. Extracted a riddle concealed within the image
+  4. Solved the riddle to identify the location
+- **Result:** Successfully identified the city (**Cardiff**) and date of 
+  the illegal event
+- **Key Skills:** Steganography, image analysis, intelligence extraction, 
+  problem-solving
+
+---
+
+#### Challenge 6: Decoding a Seller's Email Address
+- **Task:** Find the email address of a user selling stolen car parts
+- **Method:**
+  1. Located the post containing a car image
+  2. Identified a hexadecimal string within the post message
+  3. Used **CyberChef** to decode the hexadecimal string to plain text
+  4. Retrieved the seller's email address
+- **Result:** Successfully decoded and documented the seller's email address
+- **Key Skills:** Hexadecimal decoding, CyberChef, OSINT
+
+---
+
+## 📊 Skills Demonstrated in Capstone
+
+| Skill | Tool Used | Challenge |
+|-------|-----------|-----------|
+| Browser Developer Tools | Chrome/Firefox Inspector | Challenge 1 |
+| Base64 Decoding | CyberChef | Challenge 1 |
+| Hexadecimal Decoding | CyberChef | Challenge 2 & 6 |
+| OSINT & Link Analysis | TOR Browser | Challenge 3 |
+| Intelligence Documentation | Manual Analysis | Challenge 4 |
+| Steganography | stylesuxx.github.io | Challenge 5 |
+| Image Analysis | Steganography Tool | Challenge 5 |
+| Problem Solving & Riddles | Manual Analysis | Challenge 5 |
+
+---
+
+## 💡 Most Valuable Takeaways
+
+1. **The dark web is a tool** — its use depends entirely on intent and 
+   legal authorization.
+2. **Legal boundaries are critical** — always research jurisdiction laws 
+   before conducting dark web operations.
+3. **TOR is not foolproof** — always use a VPN alongside TOR for 
+   additional protection.
+4. **Threat intelligence is proactive** — dark web monitoring enables 
+   organizations to anticipate and prevent attacks.
+5. **Steganography is a real threat** — criminals hide data in plain 
+   sight; analysts must know how to find it.
+6. **CyberChef is an essential tool** — versatile for decoding, 
+   decrypting, and analyzing data in investigations.
+7. **Documentation is everything** — every action must be recorded 
+   to maintain legal standing and operational integrity.
 
 ---
 
 ## 🛠️ Tools & Technologies Used
 
-- TOR Browser
-- Dark Web Search Engines
-- Text Editor (for documenting findings)
-
----
-
-## 📊 Skills Acquired
-
-- Dark web navigation and research
-- Threat intelligence collection
-- TOR browser operation
-- Security awareness for dark web operations
-- Intelligence analysis fundamentals
+| Tool | Purpose |
+|------|---------|
+| TOR Browser | Secure, anonymous dark web access |
+| VPN | Additional layer of anonymity and protection |
+| CyberChef | Base64 and hexadecimal decoding |
+| Browser Developer Tools | Console command execution |
+| Steganography Tool | Extracting hidden data from images |
 
 ---
 
 ## 🔗 Resources
 
 - [TOR Project](https://www.torproject.org)
+- [CyberChef - GCHQ](https://gchq.github.io/CyberChef/)
+- [Steganography Tool](https://stylesuxx.github.io/steganography/)
 - [Security Blue Team Academy](https://www.securityblueeteam.com)
+- [Electronic Frontier Foundation](https://www.eff.org)
+- [US Department of Justice - Cybercrime](https://www.justice.gov/criminal-ccips)
+
+---
+
+## 📝 Personal Reflections
+
+- What was the most challenging part of the capstone?
+- he most challenging part of the capstone was identifying and extracting the admin’s username and password, I had to use Inspect Element and the browser’s Console to call a hidden function like generateUserCredentials(). The output was Base64-encoded, so i decoded it using CyberChef to reveal the actual username and password. It taught me how easily secrets can be exposed in client-side code if not properly secured.
+- How will you apply steganography and CyberChef skills in future roles?
+- Steganography is a real threat, attackers hide malware or C2 commands in images. I’ll use these skills to detect hidden data in investigations. CyberChef will be my go-to for quick decoding during incident response — whether it’s Base64, hex, or encoded strings in logs.
+- What surprised you most about dark web operations?
+- I was surprised how much legitimate intelligence can be gathered legally, it’s not all about ‘hacking’ or ‘breaking in.’ Passive monitoring, documentation, and legal compliance are just as important as technical skills.
+- How has this course changed your perspective on threat intelligence?
+- I used to think threat intel was just about reading reports. Now I see it’s about proactive hunting, using tools like TOR, CyberChef, and steganography to find threats before they hit. It’s not reactive, it’s detective work.
 
 ---
 
